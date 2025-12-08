@@ -25,12 +25,12 @@ test-coverage:
 	pytest --cov=keyrings.chainctl_auth --cov-report=html --cov-report=term
 
 lint:
-	flake8 keyrings/
-	mypy keyrings/
-	black keyrings/ --diff
+	flake8 keyrings/ chainctl_auth_tox/ tests/
+	mypy keyrings/ chainctl_auth_tox/
+	black keyrings/ chainctl_auth_tox/ tests/ --check --diff
 
 format:
-	black keyrings/
+	black keyrings/ chainctl_auth_tox/ tests/
 
 clean:
 	rm -rf build/
