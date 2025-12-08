@@ -105,10 +105,11 @@ class TestChainctlAuth:
 
     @patch("subprocess.run")
     def test_get_password_empty(self, mock_run):
-        """Test handling of unparseable chainctl output."""
+        """Test handling of empty chainctl output."""
         mock_run.return_value = Mock(
             stdout="",
-            stderr="Opening browser to https://issuer.enforce.dev/oauth?audience=libraries.cgr.dev\n",            returncode=0,
+            stderr="Opening browser to https://issuer.enforce.dev/oauth?audience=libraries.cgr.dev\n",
+            returncode=0,
         )
 
         password = self.backend.get_password("https://libraries.cgr.dev", "user")

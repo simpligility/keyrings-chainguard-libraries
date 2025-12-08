@@ -23,7 +23,7 @@ pip install keyrings-chainguard-libraries
 
 ## Prerequisites
 
-- Python 3.7 or higher
+- Python 3.9 or higher
 - `chainctl` CLI tool installed and configured
 
 ## Usage
